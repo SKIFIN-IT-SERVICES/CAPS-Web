@@ -1,0 +1,26 @@
+CAPS Offering and Services
+
+Key Operational Areas in Healthcare and Insurance
+Health Claims Management
+This is the process of submitting, processing, and paying or denying requests for payment (claims) from healthcare providers for services delivered to members.
+It includes verifying the member's eligibility, checking the services against the plan's benefits (adjudication), and coordinating patient care for cost-effective treatment (also known as Case Management).
+The goal is to ensure claims are paid accurately and efficiently according to policy terms.
+Dental Claims Processing
+This is the specialized subset of claims management focused exclusively on dental procedures.
+It involves verifying patient eligibility and benefits, determining the coverage level for different procedures (e.g., preventative, basic, major restorative), and calculating the payment based on a usual, customary, and reasonable (UCR) fee or a set fee schedule.
+Pre-determination of benefits is a common step to inform the member and provider of the estimated out-of-pocket cost before a procedure.
+P&C - Property and Casualty Insurance
+This is a type of insurance that covers losses and damages to property and protects against liability for accidents.
+Property Insurance covers physical assets like homes, cars, or business property from events like fire, storms, or theft.
+Casualty Insurance covers the policyholder's liability for accidents and injuries that occur on their property, which can include medical expenses or lost wages for others, as well as business coverages like Workers' Compensation or Professional Liability.
+Members Management/Endorsements
+This encompasses all administrative and service activities related to a health plan's enrolees.
+Key functions include enrolment, billing, premium collection, eligibility verification, communication of benefits, and managing member-related data and service requests.
+It focuses on maintaining accurate member records and providing a positive service experience.
+Provider Management
+This involves the processes for contracting with, managing, and maintaining a network of doctors, hospitals, clinics, and other healthcare facilities.
+Key activities include credentialing (verifying qualifications), contracting for payment rates, maintaining the provider directory, and monitoring the quality and efficiency of care delivered by the network.
+FSA - Flexible Spending Account/claims
+An FSA is an account offered and administered by an employer that allows employees to set aside pre-tax dollars from their pay check.
+These funds are used to pay for the employee's share of insurance premiums or for qualified medical expenses not covered by the health plan.
+A typical rule for FSAs is that benefits or cash must be used within the given benefit year, or the employee generally loses the money (known as the "use-it-or-lose-it" rule).

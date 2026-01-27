@@ -1,0 +1,124 @@
+.service-card {
+    padding: 2.5rem 2rem;
+    border-radius: 24px;
+    background: var(--white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    /* Soft initial shadow */
+    text-align: left;
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Remove old top border mechanic */
+.service-card::before {
+    display: none;
+}
+
+/* New Hover State - Lift & Glow */
+.service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(10, 35, 66, 0.1), 0 0 0 2px rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.2);
+}
+
+.card-icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: var(--surface);
+    /* Very light grey/slate */
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    color: var(--brand-blue);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.03);
+    /* Inset for depth */
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+/* Icon Gradient Overlay via pseudo-element */
+.card-icon-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-logo);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 1;
+}
+
+/* Ensure explicit stacking context */
+.card-icon-wrapper svg {
+    position: relative;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover .card-icon-wrapper {
+    transform: scale(1.1) rotate(-3deg);
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+}
+
+.service-card:hover .card-icon-wrapper::after {
+    opacity: 1;
+}
+
+.service-card:hover .card-icon-wrapper svg {
+    color: var(--primary) !important;
+    /* Dark Navy for contrast */
+    stroke: var(--primary);
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 4px rgba(255, 255, 255, 0.4));
+}
+
+.card-title {
+    color: var(--primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .card-title {
+    color: var(--brand-blue);
+}
+
+.card-desc {
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    flex-grow: 1;
+    font-weight: 400;
+}
+
+.card-link {
+    color: var(--brand-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+}
+
+.card-link:hover {
+    gap: 0.8rem;
+    /* Slide arrow */
+    text-decoration: none;
+    color: var(--brand-green);
+}
