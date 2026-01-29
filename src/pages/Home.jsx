@@ -2,48 +2,21 @@ import React from 'react';
 import HeroSection from '../components/UI/HeroSection';
 import ServiceCard from '../components/UI/ServiceCard';
 import aiLogo from '../assets/images/caps_ai_logo_1769512786566.png';
-import { Activity, ShieldCheck, Users, ClipboardList } from 'lucide-react';
+import heroBg from '../assets/images/hero_bg_workflow.png';
 import { Link } from 'react-router-dom';
-import './Pages.css';
 import logo from '../assets/logo.png';
+import { servicesData } from '../data/servicesData';
 
 const Home = () => {
-    const services = [
-        {
-            title: "Health Claims Management",
-            description: "Accurate submission, processing, and payment of healthcare claims with verification and adjudication.",
-            icon: <Activity size={32} />,
-            link: "/services/claims"
-        },
-        {
-            title: "Dental Claims Processing",
-            description: "Specialized handling of dental procedures, benefit verification, and pre-determination.",
-            icon: <ClipboardList size={32} />,
-            link: "/services/dental"
-        },
-        {
-            title: "Provider Management",
-            description: "Network maintenance, credentialing, and contracting for hospitals and clinics.",
-            icon: <Users size={32} />,
-            link: "/services/provider"
-        },
-        {
-            title: "P&C Insurance",
-            description: "Coverage for physical assets and liability protection against accidents and damages.",
-            icon: <ShieldCheck size={32} />,
-            link: "/services/pnc"
-        }
-    ];
-
     return (
         <div className="page-home">
             <HeroSection
                 logo={logo}
-                animateLogo={true}
+                animateLogo={false}
                 subtitle="Intelligent Arrangements for Your Workflow and Workforce"
                 ctaText="Explore Services"
                 ctaLink="/services"
-                image="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=2070"
+                image={heroBg}
             />
 
             <section className="section-padding container">
@@ -53,9 +26,19 @@ const Home = () => {
                 </div>
 
                 <div className="services-grid">
-                    {services.map((svc, index) => (
-                        <ServiceCard key={index} {...svc} index={index} />
-                    ))}
+                    {servicesData.map((svc, index) => {
+                        const Icon = svc.icon;
+                        return (
+                            <ServiceCard
+                                key={index}
+                                title={svc.title}
+                                description={svc.shortDesc}
+                                icon={Icon ? <Icon size={32} /> : null}
+                                link={`/services/${svc.id}`}
+                                index={index}
+                            />
+                        );
+                    })}
                 </div>
             </section>
 

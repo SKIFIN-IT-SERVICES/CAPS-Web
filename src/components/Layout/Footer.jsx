@@ -1,8 +1,8 @@
 import React from 'react';
 import './Footer.css';
 import { Mail, Phone, MapPin } from 'lucide-react';
-
-import logo from '../../assets/logo.png'; // Make sure path is correct
+import logo from '../../assets/logo.png';
+import { servicesData } from '../../data/servicesData';
 
 const Footer = () => {
     return (
@@ -16,10 +16,11 @@ const Footer = () => {
                 <div className="footer-col">
                     <h4>Services</h4>
                     <ul>
-                        <li><a href="/services/claims">Health Claims</a></li>
-                        <li><a href="/services/dental">Dental Processing</a></li>
-                        <li><a href="/services/members">Member Management</a></li>
-                        <li><a href="/services/provider">Provider Networks</a></li>
+                        {servicesData.map(svc => (
+                            <li key={svc.id}>
+                                <a href={`/services/${svc.id}`}>{svc.title}</a>
+                            </li>
+                        ))}
                     </ul>
                 </div>
 

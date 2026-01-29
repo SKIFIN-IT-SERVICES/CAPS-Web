@@ -50,7 +50,6 @@ const HeroSection = ({ title, subtitle, image, ctaText = "Learn More", ctaLink =
                             src={logo}
                             alt="CAPS Logo"
                             className="hero-logo"
-                            style={animateLogo ? { width: '280px', height: 'auto', maxWidth: '80vw' } : {}} // Bigger logo for readability
                         />
                     </motion.div>
                 )}

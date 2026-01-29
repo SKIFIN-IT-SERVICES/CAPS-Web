@@ -1,15 +1,17 @@
 .hero-section {
     position: relative;
-    height: 90vh;
-    /* Premium full-screen feel */
-    min-height: 600px;
+    height: auto;
+    /* Allow expanding */
+    min-height: 100vh;
+    /* Minimum full-screen */
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
     background: var(--primary);
-    /* Fallback */
+    padding: 8rem 0 6rem;
+    /* Ensure space for content */
 }
 
 .hero-background {
@@ -119,19 +121,20 @@
 }
 
 .hero-logo {
-    height: 180px;
+    height: 350px;
     width: auto;
     margin-bottom: 2.5rem;
+    margin-top: 3rem;
     filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.3));
     transition: transform 0.3s ease;
 }
 
 .hero-logo:hover {
-    transform: scale(1.05) rotate(2deg);
+    transform: scale(1.02);
 }
 
 @media (max-width: 768px) {
     .hero-logo {
-        height: 80px;
+        height: 160px;
     }
 }
