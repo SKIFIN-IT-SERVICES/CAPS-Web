@@ -14,6 +14,15 @@ const Footer = () => {
                 </div>
 
                 <div className="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/team">Our Team</a></li>
+                        <li><a href="/industries">Industries</a></li>
+                    </ul>
+                </div>
+
+                <div className="footer-col">
                     <h4>Services</h4>
                     <ul>
                         {servicesData.map(svc => (

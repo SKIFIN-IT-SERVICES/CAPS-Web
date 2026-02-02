@@ -5,6 +5,7 @@ import HeroSection from '../components/UI/HeroSection';
 import logo from '../assets/logo.png';
 import { motion } from 'framer-motion';
 import { ArrowLeft, CheckCircle } from 'lucide-react';
+import SectionHeader from '../components/UI/SectionHeader';
 import './Pages.css';
 import '../components/UI/ServiceCard.css'; // Re-use animations
 
@@ -41,14 +42,10 @@ const ServiceDetail = () => {
                 <div className="detail-grid">
                     {/* Left: Rich Text Content */}
                     <div className="detail-content">
-                        <motion.h2
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            className="detail-heading"
-                        >
-                            Overview
-                        </motion.h2>
+                        <SectionHeader
+                            title="Overview"
+                            align="left"
+                        />
 
                         {service.fullDesc.map((paragraph, idx) => (
                             <motion.p

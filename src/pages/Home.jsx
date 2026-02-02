@@ -4,8 +4,10 @@ import ServiceCard from '../components/UI/ServiceCard';
 import aiLogo from '../assets/images/caps_ai_logo_1769512786566.png';
 import heroBg from '../assets/images/hero_bg_workflow.png';
 import { Link } from 'react-router-dom';
+import './Pages.css';
 import logo from '../assets/logo.png';
 import { servicesData } from '../data/servicesData';
+import SectionHeader from '../components/UI/SectionHeader';
 
 const Home = () => {
     return (
@@ -20,10 +22,10 @@ const Home = () => {
             />
 
             <section className="section-padding container">
-                <div className="section-header">
-                    <h2>Our Core Expertise</h2>
-                    <p>Delivering precision and efficiency in healthcare and insurance administration.</p>
-                </div>
+                <SectionHeader
+                    title="Our Core Expertise"
+                    subtitle="Delivering precision and efficiency in healthcare and insurance administration."
+                />
 
                 <div className="services-grid">
                     {servicesData.map((svc, index) => {

@@ -5,6 +5,7 @@ import contactHero from '../assets/images/contact_support_3d_1769510307552.png';
 import logo from '../assets/logo.png';
 import { Mail, Phone, MapPin, Send, Clock, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
+import SectionHeader from '../components/UI/SectionHeader';
 
 const Contact = () => {
     return (
@@ -67,8 +68,25 @@ const Contact = () => {
                     {/* Contact Form */}
                     <div className="contact-form-section" id="contact-form">
                         <div className="form-header">
-                            <h2>Send a Message</h2>
-                            <p>We usually respond within 24 hours.</p>
+                            <motion.div
+                                className="header-icon-badge"
+                                animate={{ rotate: [0, 10, -10, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, repeatDelay: 2 }}
+                            >
+                                <Send size={24} />
+                            </motion.div>
+                            <h2 className="header-title">Send a Message</h2>
+                            <p className="header-subtitle">We usually respond within 24 hours.</p>
+
+                            <div className="header-decoration">
+                                <motion.div
+                                    className="deco-line"
+                                    initial={{ width: 0 }}
+                                    whileInView={{ width: "100px" }}
+                                    transition={{ delay: 0.3, duration: 0.8 }}
+                                    viewport={{ once: true }}
+                                />
+                            </div>
                         </div>
 
                         <form className="modern-form">

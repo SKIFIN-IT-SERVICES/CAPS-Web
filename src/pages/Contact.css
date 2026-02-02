@@ -1,8 +1,8 @@
 .contact-container {
     padding: 0 1rem;
     position: relative;
-    margin-top: -80px;
-    /* Restore overlap style */
+    margin-top: 4rem;
+    /* Create space between hero and form */
     z-index: 10;
     width: 100%;
     /* Ensure full width usage */
@@ -121,20 +121,58 @@
 
 .form-header {
     margin-bottom: 3rem;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.form-header h2 {
-    color: var(--primary);
-    font-family: var(--font-heading);
+/* Styled elements from SectionHeader */
+.header-icon-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--brand-blue), var(--brand-green));
+    border-radius: 14px;
+    color: white;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.2);
+}
+
+.header-title {
     font-size: 2.5rem;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 800;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.03em;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    font-family: var(--font-heading);
 }
 
-.form-header p {
+.header-subtitle {
     color: var(--text-light);
-    font-size: 1.1rem;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.header-decoration {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.deco-line {
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--brand-blue), var(--brand-green), transparent);
+    border-radius: 2px;
 }
 
 .modern-form {

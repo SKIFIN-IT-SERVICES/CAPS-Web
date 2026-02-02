@@ -4,6 +4,7 @@ import ServiceCard from '../components/UI/ServiceCard';
 import './Pages.css';
 import logo from '../assets/logo.png';
 import { Layers } from 'lucide-react';
+import SectionHeader from '../components/UI/SectionHeader';
 import { servicesData } from '../data/servicesData';
 
 const Services = () => {
@@ -20,10 +21,10 @@ const Services = () => {
             />
 
             <div className="container section-padding">
-                <div className="section-header">
-                    <h2>Expertise That Drives Results</h2>
-                    <p>Explore our specialized services designed to optimize your healthcare administration and insurance workflows.</p>
-                </div>
+                <SectionHeader
+                    title="Expertise That Drives Results"
+                    subtitle="Explore our specialized services designed to optimize your healthcare administration and insurance workflows."
+                />
 
                 <div className="services-list-layout">
                     {servicesData.map((svc, index) => (
