@@ -32,7 +32,7 @@ const Contact = () => {
                             <div className="icon-box"><MapPin size={20} /></div>
                             <div>
                                 <h5>Visit Us</h5>
-                                <p>123 Healthcare Blvd, Suite 100<br />Metropolis, NY 10012</p>
+                                <p>14071 Peyton Dr Unit 992<br />Chino Hills, CA 91709</p>
                             </div>
                         </div>
 
@@ -40,7 +40,7 @@ const Contact = () => {
                             <div className="icon-box"><Phone size={20} /></div>
                             <div>
                                 <h5>Call Us</h5>
-                                <p>(555) 123-4567</p>
+                                <p>909-292-XXXX</p>
                             </div>
                         </div>
 
@@ -48,7 +48,7 @@ const Contact = () => {
                             <div className="icon-box"><Mail size={20} /></div>
                             <div>
                                 <h5>Email Us</h5>
-                                <p>contact@caps-services.com</p>
+                                <p>info@caps-email.com</p>
                             </div>
                         </div>
 

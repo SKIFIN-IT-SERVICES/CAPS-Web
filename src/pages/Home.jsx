@@ -8,6 +8,11 @@ import './Pages.css';
 import logo from '../assets/logo.png';
 import { servicesData } from '../data/servicesData';
 import SectionHeader from '../components/UI/SectionHeader';
+import TrustedBy from '../components/UI/TrustedBy';
+import ImpactStats from '../components/UI/ImpactStats';
+import WhyChooseUs from '../components/UI/WhyChooseUs';
+import HowItWorks from '../components/UI/HowItWorks';
+import Testimonials from '../components/UI/Testimonials';
 
 const Home = () => {
     return (
@@ -20,6 +25,8 @@ const Home = () => {
                 ctaLink="/services"
                 image={heroBg}
             />
+
+            <TrustedBy />
 
             <section className="section-padding container">
                 <SectionHeader
@@ -43,6 +50,14 @@ const Home = () => {
                     })}
                 </div>
             </section>
+
+            <WhyChooseUs />
+
+            <ImpactStats />
+
+            <HowItWorks />
+
+            <Testimonials />
 
             <section className="section-padding bg-light">
                 <div className="container">

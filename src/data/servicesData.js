@@ -4,14 +4,14 @@ import pncImg from '../assets/images/pnc_insurance_1769508676533.png';
 import memberImg from '../assets/images/members_management_1769508885858.png';
 import providerImg from '../assets/images/provider_management_1769508987089.png';
 import fsaImg from '../assets/images/fsa_account_1769509124084.png';
-import { Activity, ClipboardList, ShieldCheck, Users, Wallet, FileText } from 'lucide-react';
+import { Activity, ClipboardList, ShieldCheck, Users, Wallet, FileText, Database, GitMerge, Server, CheckCircle, Layers, Monitor } from 'lucide-react';
 
 export const servicesData = [
     {
         id: "claims",
         title: "Health Claims Management",
         subtitle: "The AI-Driven Lifecycle: Precision, Speed, and Revenue Integrity.",
-        icon: Activity,
+        icon: Server,
         image: healthImg,
         shortDesc: "Achieve 98% clean claim rates with our AI-powered adjudication engine. We flag errors pre-submission to accelerate cash flow.",
         fullDesc: [
@@ -119,6 +119,120 @@ export const servicesData = [
             { title: "Mobile-First UX", desc: "Snap-and-submit receipt management for instant claims." },
             { title: "Tax Savings Focus", desc: "Tools to maximize participation and employer FICA reductions." },
             { title: "Debit Card Access", desc: "Seamless point-of-sale use for eligible medical expenses." }
+        ]
+    },
+    {
+        id: "data-conversions",
+        title: "Data Conversions",
+        subtitle: "Safe Passage for Critical Data: Legacy to Modern.",
+        icon: Database,
+        image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=2000", // Data/Server
+        shortDesc: "Securely migrate legacy claims and clinical data to modern standards (HL7, FHIR). We ensure 100% data integrity and compliance.",
+        fullDesc: [
+            "Migrating from legacy systems is high-stakes. Our Data Conversion service ensures that your critical historical claims, patient records, and provider data are transferred securely and accurately to your new platforms.",
+            "We handle the complexities of mapping non-standard legacy data to modern formats like HL7 v2, C-CDA, and FHIR. Our proprietary validation engines check every record before and after migration to guarantee 100% integrity.",
+            "Beyond simple transfer, we cleanse and enrich your data during the process, eliminating duplicates and correcting formatting errors, so your new system starts with a pristine 'Single Source of Truth'."
+        ],
+        features: [
+            { title: "Legacy Extraction", desc: "Safe decoding of data from mainframe and obsolete SQL architectures." },
+            { title: "Standardization", desc: "Mapping proprietary formats to interoperable industry standards (FHIR)." },
+            { title: "Data Cleansing", desc: "Automated deduplication and error correction during transit." },
+            { title: "Audit Trail", desc: "Complete chain-of-custody logging for HIPAA compliance." }
+        ]
+    },
+    {
+        id: "consulting-restructuring",
+        title: "Consulting for Dept. Restructuring",
+        subtitle: "Operational Agility: Realigning People & Process.",
+        icon: GitMerge,
+        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000", // Consulting
+        shortDesc: "Navigate financial pressures and regulatory shifts. We guide healthcare departments through strategic restructuring to maximize efficiency.",
+        fullDesc: [
+            "Market forces and regulatory changes often demand internal evolution. Our Consulting Consultants act as strategic partners to help payer and provider organizations restructure their departments for financial stability and operational agility.",
+            "We analyze your current workforce distribution and workflows to identify bottlenecks and redundancies. Whether merging departments or streamlining leadership, we provide a roadmap that aligns your human capital with your strategic goals.",
+            "Our approach minimizes disruption. We help manage the change curve, ensuring that restructuring leads to measurable efficiency gains—cost reduction, faster decision making, and improved service delivery—without sacrificing employee morale."
+        ],
+        features: [
+            { title: "Workflow Analysis", desc: "Identifying inefficiencies and 'heavy' processes for streamlining." },
+            { title: "Change Management", desc: "Strategic communication plans to guide teams through transition." },
+            { title: "Role Alignment", desc: "Redefining job functions to match modern operational needs." },
+            { title: "Financial Optimization", desc: "Structuring departments to reduce overhead and improve ROI." }
+        ]
+    },
+    {
+        id: "it-co-management",
+        title: "High-level IT Support Co-management",
+        subtitle: "Hybrid Power: Extending Your Internal IT.",
+        icon: Server,
+        image: "https://images.unsplash.com/photo-1488229297570-58520851e868?auto=format&fit=crop&q=80&w=2000", // IT Support
+        shortDesc: "Scale your IT capabilities without headcount. We provide specialized cybersecurity, cloud, and infrastructure support to augment your team.",
+        fullDesc: [
+            "The complexity of healthcare IT often outpaces the capacity of internal teams. Our Co-managed IT service offers a hybrid model, letting you keep control of daily operations while we handle critical backend infrastructure, security, and specialized projects.",
+            "We plug the skills gap. If you need advanced cybersecurity threat hunters or cloud architects, you get instant access to our experts without the recruiting costs. We monitor your systems 24/7/365 to prevent downtime.",
+            "This partnership allows your internal IT staff to focus on strategic, user-facing initiatives that improve patient care, while we ensure the 'lights stay on' with robust compliance, patching, and disaster recovery protocols."
+        ],
+        features: [
+            { title: "24/7 Monitoring", desc: "Round-the-clock eyes on critical infrastructure and uptime." },
+            { title: "Cybersecurity Shield", desc: "Advanced threat detection and HIPAA compliance enforcement." },
+            { title: "Skill Augmentation", desc: "Instant access to specialized cloud and network engineers." },
+            { title: "Cost Efficiency", desc: "Enterprise-grade support for a fraction of full-time hiring costs." }
+        ]
+    },
+    {
+        id: "claims-adjudication",
+        title: "Claims Adjudication Services",
+        subtitle: "Outsourced Excellence: Speed, Accuracy, Scale.",
+        icon: CheckCircle,
+        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=2000", // Medical Checklist // Placeholder
+        shortDesc: "Eliminate backlogs and reduce overhead. Our dedicated adjudication experts process claims with speed and 99% accuracy.",
+        fullDesc: [
+            "Scalability is the biggest challenge in claims processing. Our outsourced Adjudication Services provide you with an on-demand workforce of experienced claims examiners who can handle spikes in volume without compromising quality.",
+            "We function as a seamless extension of your team. Utilizing your specific business rules and platforms, our experts manually review complex claims that fail auto-adjudication, ensuring fair and accurate payment decisions.",
+            "By outsourcing the 'grunt work' of high-volume processing, your internal team can focus on high-value tasks like provider relationships and case management. We deliver faster reimbursements and reduced administrative costs instantly."
+        ],
+        features: [
+            { title: "On-Demand Scale", desc: "Flexibly ramp up staff to handle seasonal enrollment spikes." },
+            { title: "Cost Reduction", desc: "Save 30-40% on operational costs vs. internal hiring." },
+            { title: "Backlog Elimination", desc: "Rapid processing to clear aged claims and improve cash flow." },
+            { title: "Quality Assurance", desc: "Rigorous tiered review process to ensure 99% payment accuracy." }
+        ]
+    },
+    {
+        id: "system-reseller",
+        title: "Claims Management System Reseller",
+        subtitle: "Best-in-Class Platforms: Curated & Compliant.",
+        icon: Layers,
+        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000", // Dashboard
+        shortDesc: "Stop searching. We resell and implement the industry's top-rated, HIPAA-compliant claims platforms tailored to your size.",
+        fullDesc: [
+            "Choosing the right Claims Management System (CMS) is daunting. As an authorized reseller of the industry's leading platforms, we help you select and license software that perfectly matches your organization's complexity and budget.",
+            "We don't just sell licenses; we ensure success. Our team handles the configuration, implementation, and training, ensuring you get the most out of your investment from Day 1. We curate platforms known for automation, compliance, and ease of use.",
+            "Whether you are a TPA or a growing health plan, we provide access to enterprise-grade tools that might otherwise be out of reach, often with preferred pricing and enhanced support packages exclusive to our partners."
+        ],
+        features: [
+            { title: "Curated Selection", desc: "Access to top-tier, pre-vetted claims management platforms." },
+            { title: "Expert Implementation", desc: "Configuration and setup by certified system architects." },
+            { title: "Preferred Pricing", desc: "Leverage our partnership volume for better license rates." },
+            { title: "Training & Support", desc: "Comprehensive onboarding to ensure staff adoption." }
+        ]
+    },
+    {
+        id: "website-wrapper",
+        title: "Modern Web Wrapper for Legacy",
+        subtitle: "Modernize Without Rebuilding: The UI Lift.",
+        icon: Monitor,
+        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=2000", // Code/Screen // Placeholder
+        shortDesc: "Give your legacy green-screen system a modern web interface. Improve UX and accessibility without a risky backend rewrite.",
+        fullDesc: [
+            "You don't have to rip and replace your stable legacy system to get a modern user experience. Our 'Website Wrapper' service encapsulates your existing mainframe or legacy claims application in a responsive, modern web interface.",
+            "This 'Headless' approach extends the life of your core technology. We build a sleek, intuitive frontend that interacts with your legacy backend via APIs or screen-scraping tech, improving employee productivity and enabling remote work access.",
+            "It's the fastest, safest path to modernization. You gain the benefits of a cloud-accessible, user-friendly dashboard for your team or members, while keeping the trusted, battle-tested logic of your core system intact."
+        ],
+        features: [
+            { title: "UX Transformation", desc: "Convert complex legacy screens into intuitive web dashboards." },
+            { title: "Risk-Free Modernization", desc: "Update the look and feel without touching critical backend logic." },
+            { title: "Remote Accessibility", desc: "Enable secure access to on-prem systems via modern web browsers." },
+            { title: "Extended Lifespan", desc: "Add years of value to your existing infrastructure investments." }
         ]
     }
 ];

@@ -3,10 +3,12 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '../../assets/logo.png';
 import './Navbar.css';
+import { servicesData } from '../../data/servicesData';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
+    const [isServicesOpen, setIsServicesOpen] = useState(false); // State for mega menu
     const { pathname } = useLocation();
     const isHome = pathname === '/';
 
@@ -21,8 +23,6 @@ const Navbar = () => {
     const navLinks = [
         { name: 'Home', path: '/' },
         { name: 'About', path: '/about' },
-        { name: 'Team', path: '/team' },
-        { name: 'Industries', path: '/industries' },
         { name: 'Services', path: '/services' },
         { name: 'Contact', path: '/contact' },
     ];
@@ -35,15 +35,55 @@ const Navbar = () => {
                 </NavLink>
 
                 <div className="desktop-menu">
-                    {navLinks.map((link) => (
-                        <NavLink
-                            key={link.name}
-                            to={link.path}
-                            className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
-                        >
-                            {link.name}
-                        </NavLink>
-                    ))}
+                    {navLinks.map((link) => {
+                        if (link.name === 'Services') {
+                            return (
+                                <div
+                                    key={link.name}
+                                    className="nav-item-dropdown"
+                                    onMouseEnter={() => setIsServicesOpen(true)}
+                                    onMouseLeave={() => setIsServicesOpen(false)}
+                                >
+                                    <NavLink
+                                        to={link.path}
+                                        className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+                                        onClick={() => setIsServicesOpen(false)}
+                                    >
+                                        {link.name}
+                                    </NavLink>
+                                    <div className={`mega-menu glass-panel ${isServicesOpen ? 'visible' : ''}`}>
+                                        <div className="mega-menu-grid">
+                                            {servicesData.map(svc => (
+                                                <NavLink
+                                                    key={svc.id}
+                                                    to={`/services/${svc.id}`}
+                                                    className="mega-menu-item"
+                                                    onClick={() => setIsServicesOpen(false)}
+                                                >
+                                                    <div className="mega-icon-box">
+                                                        <svc.icon size={20} />
+                                                    </div>
+                                                    <div className="mega-text">
+                                                        <h5>{svc.title}</h5>
+                                                        <span>{svc.subtitle.substring(0, 40)}...</span>
+                                                    </div>
+                                                </NavLink>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        }
+                        return (
+                            <NavLink
+                                key={link.name}
+                                to={link.path}
+                                className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}
+                            >
+                                {link.name}
+                            </NavLink>
+                        );
+                    })}
                     <button className="cta-button">Get Started</button>
                 </div>
 

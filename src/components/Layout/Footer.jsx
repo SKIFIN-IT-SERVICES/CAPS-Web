@@ -17,8 +17,6 @@ const Footer = () => {
                     <h4>Company</h4>
                     <ul>
                         <li><a href="/about">About Us</a></li>
-                        <li><a href="/team">Our Team</a></li>
-                        <li><a href="/industries">Industries</a></li>
                     </ul>
                 </div>
 
@@ -36,9 +34,9 @@ const Footer = () => {
                 <div className="footer-col">
                     <h4>Contact</h4>
                     <ul className="contact-list">
-                        <li><MapPin size={18} /> 123 Healthcare Blvd, City</li>
-                        <li><Phone size={18} /> (555) 123-4567</li>
-                        <li><Mail size={18} /> contact@caps.com</li>
+                        <li><MapPin size={18} /> 14071 Peyton Dr Unit 992, Chino Hills, CA 91709</li>
+                        <li><Phone size={18} /> 909-292-XXXX</li>
+                        <li><Mail size={18} /> info@caps-email.com</li>
                     </ul>
                 </div>
             </div>

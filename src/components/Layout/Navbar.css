@@ -158,3 +158,114 @@
         display: block;
     }
 }
+
+/* Mega Menu Defaults */
+.nav-item-dropdown {
+    /* position: relative; Removed to allow anchoring to .navbar */
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mega-menu {
+    position: fixed;
+    /* Fixed works better since Navbar is fixed */
+    top: 75px;
+    /* Moved up as requested */
+    /* Match scrolled height approx, or use 100% of parent if parent is navbar */
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    /* Removed downward shift */
+    width: 90vw;
+    max-width: 1000px;
+    background: rgba(15, 23, 42, 0.99) !important;
+    /* Force dark background over glass-panel */
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-height: 80vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    /* For Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    /* Ensure strictly on top */
+}
+
+/* Adjust top for non-scrolled state if needed, or handle via JS. 
+   Simplification: relying on hover on .nav-item-dropdown to trigger it.
+   But if position is fixed, we need to ensure it appears "connected".
+   Actually, if .navbar is fixed, position: absolute on .mega-menu (anchored to .navbar) is better than fixed.
+*/
+.navbar .mega-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    width: 90vw;
+    max-width: 1000px;
+}
+
+.nav-item-dropdown .mega-menu.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+    /* Ensure events work when visible */
+}
+
+.mega-menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.mega-menu-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.mega-menu-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.mega-icon-box {
+    background: rgba(56, 189, 248, 0.15);
+    padding: 12px;
+    border-radius: 12px;
+    color: #38bdf8;
+    /* Explicit color */
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.mega-menu-item:hover .mega-icon-box {
+    transform: scale(1.1);
+    background: var(--primary);
+    color: white;
+}
+
+.mega-text h5 {
+    margin: 0 0 0.35rem 0;
+    font-size: 1rem;
+    color: #ffffff !important;
+    /* Force visibility */
+    font-weight: 700;
+}
+
+.mega-text span {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7) !important;
+    /* Force visibility */
+    line-height: 1.4;
+    display: block;
+}
