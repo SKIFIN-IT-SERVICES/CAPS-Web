@@ -8,7 +8,7 @@ import { Activity, ClipboardList, ShieldCheck, Users, Wallet, FileText, Database
 
 export const servicesData = [
     {
-        id: "claims",
+        id: "health-claims-management",
         title: "Health Claims Management",
         subtitle: "The AI-Driven Lifecycle: Precision, Speed, and Revenue Integrity.",
         icon: Server,
@@ -24,10 +24,15 @@ export const servicesData = [
             { title: "Intelligent Intake", desc: "Automated scrubbing of electronic claims for instant error detection." },
             { title: "Real-Time Eligibility", desc: "Instant verification to prevent coverage-related rejections." },
             { title: "Recall & Recovery", desc: "Automated workflows to recover revenue from underpaid claims." }
+        ],
+        acronyms: [
+            { term: "CMS-1500", definition: "Standard claim form for non-institutional providers." },
+            { term: "UB-04", definition: "Standard claim form for institutional providers." },
+            { term: "CPT", definition: "Current Procedural Terminology for coding medical services." }
         ]
     },
     {
-        id: "dental",
+        id: "dental-claims-processing",
         title: "Dental Claims Processing",
         subtitle: "Specialization at Scale: CDT 2025 Compliance & Accuracy.",
         icon: ClipboardList,
@@ -43,10 +48,15 @@ export const servicesData = [
             { title: "Painless Pre-Determinations", desc: "Instant out-of-pocket estimates for complex procedures." },
             { title: "UCR Fee Integrity", desc: "Logic-based analysis to maximize competitive reimbursement areas." },
             { title: "Smart Attachments", desc: "Seamless integration of x-rays and periodontal charts." }
+        ],
+        acronyms: [
+            { term: "CDT", definition: "Current Dental Terminology." },
+            { term: "UCR", definition: "Usual, Customary, and Reasonable fees." },
+            { term: "ADA", definition: "American Dental Association." }
         ]
     },
     {
-        id: "pnc",
+        id: "property-casualty-insurance",
         title: "P&C Insurance",
         subtitle: "Asset & Liability Mastery: Digital-First Risk Resolution.",
         icon: ShieldCheck,
@@ -62,10 +72,15 @@ export const servicesData = [
             { title: "Liability Shield", desc: "Analytics to assess litigation risk and optimize settlements." },
             { title: "Virtual Adjuster Desk", desc: "Remote image assessment for faster property claim resolution." },
             { title: "Fraud Defense", desc: "AI detection of manipulated images and suspicious patterns." }
+        ],
+        acronyms: [
+            { term: "FNOL", definition: "First Notice of Loss." },
+            { term: "P&C", definition: "Property and Casualty Insurance." },
+            { term: "SIU", definition: "Special Investigation Unit (Fraud)." }
         ]
     },
     {
-        id: "members",
+        id: "member-management",
         title: "Member Management",
         subtitle: "The Digital Experience: Seamless Enrollment & Retention.",
         icon: Users,
@@ -81,10 +96,15 @@ export const servicesData = [
             { title: "Unified Member Portal", desc: "One app for ID cards, claims, and benefit tracking." },
             { title: "Financial Transparency", desc: "Clear, understandable billing and premium collection tools." },
             { title: "Proactive Engagement", desc: "Automated communication to drive healthy member behaviors." }
+        ],
+        acronyms: [
+            { term: "ICHRA", definition: "Individual Coverage Health Reimbursement Arrangement." },
+            { term: "EOB", definition: "Explanation of Benefits." },
+            { term: "HRA", definition: "Health Reimbursement Arrangement." }
         ]
     },
     {
-        id: "provider",
+        id: "provider-management",
         title: "Provider Management",
         subtitle: "Network Integrity: Automated Compliance & Credentialing.",
         icon: FileText,
@@ -100,10 +120,16 @@ export const servicesData = [
             { title: "Monthly Monitoring", desc: "Continuous checks against OIG/SAM exclusion lists." },
             { title: "Network Intelligence", desc: "Real-time mapping to ensure adequacy and close care gaps." },
             { title: "Audit-Ready Data", desc: "Centralized, compliant repository for all provider documentation." }
+        ],
+        acronyms: [
+            { term: "NCQA", definition: "National Committee for Quality Assurance." },
+            { term: "URAC", definition: "Utilization Review Accreditation Commission." },
+            { term: "PSV", definition: "Primary Source Verification." },
+            { term: "OIG", definition: "Office of Inspector General." }
         ]
     },
     {
-        id: "fsa",
+        id: "fsa-administration",
         title: "FSA Administration",
         subtitle: "Pre-Tax Precision: Smart Substantiation & AI.",
         icon: Wallet,
@@ -119,6 +145,11 @@ export const servicesData = [
             { title: "Mobile-First UX", desc: "Snap-and-submit receipt management for instant claims." },
             { title: "Tax Savings Focus", desc: "Tools to maximize participation and employer FICA reductions." },
             { title: "Debit Card Access", desc: "Seamless point-of-sale use for eligible medical expenses." }
+        ],
+        acronyms: [
+            { term: "FSA", definition: "Flexible Spending Account." },
+            { term: "FICA", definition: "Federal Insurance Contributions Act." },
+            { term: "IRS", definition: "Internal Revenue Service." }
         ]
     },
     {
@@ -138,6 +169,11 @@ export const servicesData = [
             { title: "Standardization", desc: "Mapping proprietary formats to interoperable industry standards (FHIR)." },
             { title: "Data Cleansing", desc: "Automated deduplication and error correction during transit." },
             { title: "Audit Trail", desc: "Complete chain-of-custody logging for HIPAA compliance." }
+        ],
+        acronyms: [
+            { term: "HL7", definition: "Health Level Seven International." },
+            { term: "FHIR", definition: "Fast Healthcare Interoperability Resources." },
+            { term: "C-CDA", definition: "Consolidated Clinical Document Architecture." }
         ]
     },
     {
@@ -157,6 +193,11 @@ export const servicesData = [
             { title: "Change Management", desc: "Strategic communication plans to guide teams through transition." },
             { title: "Role Alignment", desc: "Redefining job functions to match modern operational needs." },
             { title: "Financial Optimization", desc: "Structuring departments to reduce overhead and improve ROI." }
+        ],
+        acronyms: [
+            { term: "ROI", definition: "Return on Investment." },
+            { term: "KPI", definition: "Key Performance Indicator." },
+            { term: "SME", definition: "Subject Matter Expert." }
         ]
     },
     {
@@ -176,6 +217,11 @@ export const servicesData = [
             { title: "Cybersecurity Shield", desc: "Advanced threat detection and HIPAA compliance enforcement." },
             { title: "Skill Augmentation", desc: "Instant access to specialized cloud and network engineers." },
             { title: "Cost Efficiency", desc: "Enterprise-grade support for a fraction of full-time hiring costs." }
+        ],
+        acronyms: [
+            { term: "HIPAA", definition: "Health Insurance Portability and Accountability Act." },
+            { term: "SOC2", definition: "Service Organization Control 2." },
+            { term: "NOC", definition: "Network Operations Center." }
         ]
     },
     {
@@ -195,10 +241,15 @@ export const servicesData = [
             { title: "Cost Reduction", desc: "Save 30-40% on operational costs vs. internal hiring." },
             { title: "Backlog Elimination", desc: "Rapid processing to clear aged claims and improve cash flow." },
             { title: "Quality Assurance", desc: "Rigorous tiered review process to ensure 99% payment accuracy." }
+        ],
+        acronyms: [
+            { term: "TPA", definition: "Third Party Administrator." },
+            { term: "SLA", definition: "Service Level Agreement." },
+            { term: "QA", definition: "Quality Assurance." }
         ]
     },
     {
-        id: "system-reseller",
+        id: "claims-management-system-reseller",
         title: "Claims Management System Reseller",
         subtitle: "Best-in-Class Platforms: Curated & Compliant.",
         icon: Layers,
@@ -214,10 +265,15 @@ export const servicesData = [
             { title: "Expert Implementation", desc: "Configuration and setup by certified system architects." },
             { title: "Preferred Pricing", desc: "Leverage our partnership volume for better license rates." },
             { title: "Training & Support", desc: "Comprehensive onboarding to ensure staff adoption." }
+        ],
+        acronyms: [
+            { term: "CMS", definition: "Claims Management System." },
+            { term: "SaaS", definition: "Software as a Service." },
+            { term: "API", definition: "Application Programming Interface." }
         ]
     },
     {
-        id: "website-wrapper",
+        id: "modern-legacy-web-wrapper",
         title: "Modern Web Wrapper for Legacy",
         subtitle: "Modernize Without Rebuilding: The UI Lift.",
         icon: Monitor,
@@ -233,6 +289,11 @@ export const servicesData = [
             { title: "Risk-Free Modernization", desc: "Update the look and feel without touching critical backend logic." },
             { title: "Remote Accessibility", desc: "Enable secure access to on-prem systems via modern web browsers." },
             { title: "Extended Lifespan", desc: "Add years of value to your existing infrastructure investments." }
+        ],
+        acronyms: [
+            { term: "UX/UI", definition: "User Experience / User Interface." },
+            { term: "SPA", definition: "Single Page Application." },
+            { term: "HTML5", definition: "Hypertext Markup Language 5." }
         ]
     }
 ];

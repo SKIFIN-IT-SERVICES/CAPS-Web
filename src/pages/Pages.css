@@ -7,8 +7,8 @@
 .page-services,
 .page-service-detail,
 .page-contact {
-    padding-bottom: 15rem;
-    /* Massive spacing to protect footer */
+    padding-bottom: 10rem;
+    /* Increased spacing */
 }
 
 .section-padding {
@@ -232,4 +232,38 @@
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+}
+
+/* Acronyms Section Refinements */
+.acronyms-section {
+    margin-bottom: 3rem;
+}
+
+.acronyms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.acronym-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.acronym-term {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+
+.acronym-def {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
 }

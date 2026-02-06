@@ -84,7 +84,7 @@ const Navbar = () => {
                             </NavLink>
                         );
                     })}
-                    <button className="cta-button">Get Started</button>
+                    <NavLink to="/contact" className="cta-button">Get Started</NavLink>
                 </div>
 
                 <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>

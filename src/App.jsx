@@ -23,14 +23,7 @@ const LoadingFallback = () => (
   </div>
 );
 
-// Scroll to top on route change
-const ScrollToTop = () => {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
-  return null;
-}
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (

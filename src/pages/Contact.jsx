@@ -1,11 +1,13 @@
 import React from 'react';
 import HeroSection from '../components/UI/HeroSection';
 import './Contact.css'; // New dedicated CSS
+import './Pages.css'; // Shared page styles
 import contactHero from '../assets/images/contact_support_3d_1769510307552.png';
 import logo from '../assets/logo.png';
 import { Mail, Phone, MapPin, Send, Clock, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
 import SectionHeader from '../components/UI/SectionHeader';
+import { servicesData } from '../data/servicesData';
 
 const Contact = () => {
     return (
@@ -52,13 +54,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="info-item">
-                            <div className="icon-box"><Clock size={20} /></div>
-                            <div>
-                                <h5>Business Hours</h5>
-                                <p>Mon - Fri: 9:00 AM - 6:00 PM</p>
-                            </div>
-                        </div>
+
 
                         <div className="contact-illustration">
                             <img src={contactHero} alt="Contact Illustration" />
@@ -109,17 +105,39 @@ const Contact = () => {
                                 </div>
                             </div>
 
+                            <div className="form-row">
+                                <div className="form-group">
+                                    <label>Company Name</label>
+                                    <input type="text" placeholder="Your Company" />
+                                </div>
+                                <div className="form-group">
+                                    <label>Company Size</label>
+                                    <input type="text" placeholder="e.g. 1-50, 50-200" />
+                                </div>
+                            </div>
+
                             <div className="form-group">
-                                <label>Subject</label>
+                                <label>Role / Job Title</label>
+                                <input type="text" placeholder="e.g. CTO, Claims Manager" />
+                            </div>
+
+                            <div className="form-group">
+                                <label>Service of Interest</label>
                                 <div className="input-with-icon">
                                     <MessageSquare size={18} className="input-icon" />
                                     <select>
-                                        <option>General Inquiry</option>
-                                        <option>Claims Management</option>
-                                        <option>Provider Services</option>
-                                        <option>Partnership</option>
+                                        <option value="">Select a service...</option>
+                                        {servicesData.map(service => (
+                                            <option key={service.id} value={service.id}>{service.title}</option>
+                                        ))}
+                                        <option value="other">Other Inquiry</option>
                                     </select>
                                 </div>
+                            </div>
+
+                            <div className="form-group">
+                                <label>Subject</label>
+                                <input type="text" placeholder="Brief summary of your inquiry" />
                             </div>
 
                             <div className="form-group">
