@@ -57,7 +57,7 @@ const Navbar = () => {
                                                 <NavLink
                                                     key={svc.id}
                                                     to={`/services/${svc.id}`}
-                                                    className="mega-menu-item"
+                                                    className={`mega-menu-item ${pathname === `/services/${svc.id}` ? 'active' : ''}`}
                                                     onClick={() => setIsServicesOpen(false)}
                                                 >
                                                     <div className="mega-icon-box">

@@ -234,8 +234,14 @@
     transition: background 0.2s ease;
 }
 
-.mega-menu-item:hover {
+.mega-menu-item:hover,
+.mega-menu-item.active {
     background: rgba(255, 255, 255, 0.08);
+}
+
+.mega-menu-item.active {
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    /* Blue border for active item */
 }
 
 .mega-icon-box {
