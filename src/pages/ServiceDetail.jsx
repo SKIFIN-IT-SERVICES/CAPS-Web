@@ -43,27 +43,7 @@ const ServiceDetail = () => {
                     {/* Left: Rich Text Content */}
                     <div className="detail-content">
 
-                        {/* Acronyms Section - Requested to be first */}
-                        {service.acronyms && (
-                            <div className="acronyms-section">
-                                <SectionHeader title="Key Terms & Acronyms" align="left" />
-                                <div className="acronyms-grid">
-                                    {service.acronyms.map((item, idx) => (
-                                        <motion.div
-                                            key={idx}
-                                            className="acronym-card"
-                                            initial={{ opacity: 0, y: 10 }}
-                                            whileInView={{ opacity: 1, y: 0 }}
-                                            transition={{ delay: idx * 0.1 }}
-                                            viewport={{ once: true }}
-                                        >
-                                            <span className="acronym-term">{item.term}</span>
-                                            <span className="acronym-def">{item.definition}</span>
-                                        </motion.div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+
 
                         <SectionHeader
                             title="Overview"

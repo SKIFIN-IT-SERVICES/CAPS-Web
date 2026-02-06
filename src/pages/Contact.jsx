@@ -19,7 +19,7 @@ const Contact = () => {
                 subtitle="We're here to help you optimize your intelligent arrangements."
                 ctaText="Scroll Down"
                 ctaLink="#contact-form"
-                image="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80&w=2072"
+                image="/images/assets/contact-hero.jpg"
             />
 
             <div className="container contact-container">

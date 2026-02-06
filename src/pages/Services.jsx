@@ -17,7 +17,7 @@ const Services = () => {
                 subtitle="Comprehensive solutions for every aspect of operational management."
                 ctaText="Get a Quote"
                 ctaLink="/contact"
-                image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2070"
+                image="/images/assets/services-hero.jpg"
             />
 
             <div className="container section-padding">

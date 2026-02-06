@@ -1,7 +1,7 @@
 .footer {
     position: relative;
     background: linear-gradient(to top, rgba(15, 23, 42, 1) 0%, rgba(15, 23, 42, 0.9) 100%),
-        url('https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&q=80&w=2076');
+        url('/images/assets/footer-bg.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

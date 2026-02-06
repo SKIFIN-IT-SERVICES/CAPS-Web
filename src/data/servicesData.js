@@ -63,7 +63,7 @@ export const servicesData = [
         image: pncImg,
         shortDesc: "Rapid Digital FNOL intake and AI-driven liability analytics. Protect assets and settle claims faster with data-backed confidence.",
         fullDesc: [
-            "In Property & Casualty, every hour of delay increases costs. Our Digital-First intake reduces First-Notice-of-Loss (FNOL) cycle times by up to 50%. Whether it's storm damage or theft, we facilitate rapid assessment to settle property claims with speed and empathy.",
+            "In Property & Casualty, every hour of delay increases costs. Our Digital-First intake reduces FNOL (First-Notice-of-Loss) cycle times by up to 50%. Whether it's storm damage or theft, we facilitate rapid assessment to settle property claims with speed and empathy.",
             "For liability management, we deploy advanced analytics to protect your bottom line. Our 'Liability Shield' protocols assess risks early, helping you avoid 'nuclear verdicts' in complex litigation by identifying fair settlement values quickly using historical data.",
             "We also leverage next-gen fraud detection. Our systems analyze patterns to flag digitally altered evidence or inconsistent statements, ensuring that you only pay legitimate claims while aggressively defending against abuse."
         ],
@@ -157,7 +157,7 @@ export const servicesData = [
         title: "Data Conversions",
         subtitle: "Safe Passage for Critical Data: Legacy to Modern.",
         icon: Database,
-        image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&q=80&w=2000", // Data/Server
+        image: "/images/assets/data-server.jpg", // Data/Server
         shortDesc: "Securely migrate legacy claims and clinical data to modern standards (HL7, FHIR). We ensure 100% data integrity and compliance.",
         fullDesc: [
             "Migrating from legacy systems is high-stakes. Our Data Conversion service ensures that your critical historical claims, patient records, and provider data are transferred securely and accurately to your new platforms.",
@@ -181,7 +181,7 @@ export const servicesData = [
         title: "Consulting for Dept. Restructuring",
         subtitle: "Operational Agility: Realigning People & Process.",
         icon: GitMerge,
-        image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=2000", // Consulting
+        image: "/images/assets/consulting.jpg", // Consulting
         shortDesc: "Navigate financial pressures and regulatory shifts. We guide healthcare departments through strategic restructuring to maximize efficiency.",
         fullDesc: [
             "Market forces and regulatory changes often demand internal evolution. Our Consulting Consultants act as strategic partners to help payer and provider organizations restructure their departments for financial stability and operational agility.",
@@ -205,7 +205,7 @@ export const servicesData = [
         title: "High-level IT Support Co-management",
         subtitle: "Hybrid Power: Extending Your Internal IT.",
         icon: Server,
-        image: "https://images.unsplash.com/photo-1488229297570-58520851e868?auto=format&fit=crop&q=80&w=2000", // IT Support
+        image: "/images/assets/it-support.jpg", // IT Support
         shortDesc: "Scale your IT capabilities without headcount. We provide specialized cybersecurity, cloud, and infrastructure support to augment your team.",
         fullDesc: [
             "The complexity of healthcare IT often outpaces the capacity of internal teams. Our Co-managed IT service offers a hybrid model, letting you keep control of daily operations while we handle critical backend infrastructure, security, and specialized projects.",
@@ -229,7 +229,7 @@ export const servicesData = [
         title: "Claims Adjudication Services",
         subtitle: "Outsourced Excellence: Speed, Accuracy, Scale.",
         icon: CheckCircle,
-        image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=2000", // Medical Checklist // Placeholder
+        image: "/images/assets/medical-checklist.jpg", // Medical Checklist // Placeholder
         shortDesc: "Eliminate backlogs and reduce overhead. Our dedicated adjudication experts process claims with speed and 99% accuracy.",
         fullDesc: [
             "Scalability is the biggest challenge in claims processing. Our outsourced Adjudication Services provide you with an on-demand workforce of experienced claims examiners who can handle spikes in volume without compromising quality.",
@@ -253,10 +253,10 @@ export const servicesData = [
         title: "Claims Management System Reseller",
         subtitle: "Best-in-Class Platforms: Curated & Compliant.",
         icon: Layers,
-        image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2000", // Dashboard
+        image: "/images/assets/dashboard.jpg", // Dashboard
         shortDesc: "Stop searching. We resell and implement the industry's top-rated, HIPAA-compliant claims platforms tailored to your size.",
         fullDesc: [
-            "Choosing the right Claims Management System (CMS) is daunting. As an authorized reseller of the industry's leading platforms, we help you select and license software that perfectly matches your organization's complexity and budget.",
+            "Choosing the right CMS (Claims Management System) is daunting. As an authorized reseller of the industry's leading platforms, we help you select and license software that perfectly matches your organization's complexity and budget.",
             "We don't just sell licenses; we ensure success. Our team handles the configuration, implementation, and training, ensuring you get the most out of your investment from Day 1. We curate platforms known for automation, compliance, and ease of use.",
             "Whether you are a TPA or a growing health plan, we provide access to enterprise-grade tools that might otherwise be out of reach, often with preferred pricing and enhanced support packages exclusive to our partners."
         ],
@@ -277,7 +277,7 @@ export const servicesData = [
         title: "Modern Web Wrapper for Legacy",
         subtitle: "Modernize Without Rebuilding: The UI Lift.",
         icon: Monitor,
-        image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=2000", // Code/Screen // Placeholder
+        image: "/images/assets/code-screen.jpg", // Code/Screen // Placeholder
         shortDesc: "Give your legacy green-screen system a modern web interface. Improve UX and accessibility without a risky backend rewrite.",
         fullDesc: [
             "You don't have to rip and replace your stable legacy system to get a modern user experience. Our 'Website Wrapper' service encapsulates your existing mainframe or legacy claims application in a responsive, modern web interface.",
