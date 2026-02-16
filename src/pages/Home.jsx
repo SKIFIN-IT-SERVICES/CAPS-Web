@@ -14,6 +14,12 @@ import WhyChooseUs from '../components/UI/WhyChooseUs';
 import HowItWorks from '../components/UI/HowItWorks';
 import Testimonials from '../components/UI/Testimonials';
 
+import IndustriesWeServe from '../components/UI/IndustriesWeServe';
+import CaseStudyCarousel from '../components/UI/CaseStudyCarousel';
+import ComplianceBanner from '../components/UI/ComplianceBanner';
+import InsightsGrid from '../components/UI/InsightsGrid';
+import CTASection from '../components/UI/CTASection';
+
 const Home = () => {
     return (
         <div className="page-home">
@@ -27,6 +33,10 @@ const Home = () => {
             />
 
             <TrustedBy />
+
+            <ComplianceBanner />
+
+            <IndustriesWeServe />
 
             <section className="section-padding container">
                 <SectionHeader
@@ -51,25 +61,19 @@ const Home = () => {
                 </div>
             </section>
 
+            <CaseStudyCarousel />
+
             <WhyChooseUs />
 
             <ImpactStats />
 
             <HowItWorks />
 
+            <InsightsGrid />
+
             <Testimonials />
 
-            <section className="section-padding bg-light">
-                <div className="container">
-                    <div className="glass-panel highlight-box">
-                        <h2>Ready to Optimize Your Operations?</h2>
-                        <p>Partner with CAPS for streamlined claims and provider management.</p>
-                        <Link to="/contact">
-                            <button className="cta-button primary-btn">Contact Us Today</button>
-                        </Link>
-                    </div>
-                </div>
-            </section>
+            <CTASection />
         </div>
     );
 };

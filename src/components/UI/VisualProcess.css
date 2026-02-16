@@ -1,0 +1,308 @@
+.visual-process-section {
+    padding: 6rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Premium Header Styles */
+.process-header-wrapper {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title-premium {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.section-line-gradient {
+    height: 4px;
+    width: 80px;
+    background: linear-gradient(90deg, #3b82f6, #06b6d4);
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+.process-heading {
+    font-size: 3rem;
+    margin-bottom: 6rem;
+    text-align: center;
+    color: var(--text-dark);
+    font-weight: 800;
+    letter-spacing: -1px;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.visual-steps-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    /* More breathable */
+    position: relative;
+}
+
+/* Gradient Vertical Track */
+.visual-steps-container::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    bottom: 50px;
+    left: 50%;
+    width: 4px;
+    background: linear-gradient(to bottom,
+            rgba(56, 189, 248, 0),
+            rgba(56, 189, 248, 0.5) 10%,
+            #38bdf8 50%,
+            rgba(16, 185, 129, 0.5) 90%,
+            rgba(16, 185, 129, 0));
+    transform: translateX(-50%);
+    z-index: 0;
+    border-radius: 4px;
+    filter: blur(1px);
+}
+
+.visual-step-row {
+    display: flex;
+    align-items: stretch;
+    gap: 6rem;
+    position: relative;
+    z-index: 1;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Premium Glass Card */
+.step-content {
+    flex: 1;
+    position: relative;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 3rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow:
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 20px 25px -5px rgba(56, 189, 248, 0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.step-content:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 10px 15px -3px rgba(0, 0, 0, 0.05),
+        0 25px 30px -5px rgba(56, 189, 248, 0.1);
+}
+
+/* Watermark Number */
+.step-number-watermark {
+    font-size: 8rem;
+    font-weight: 900;
+    position: absolute;
+    top: -40px;
+    right: 20px;
+    line-height: 1;
+    z-index: 0;
+    opacity: 0.06;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    pointer-events: none;
+    font-family: var(--font-heading);
+}
+
+.step-header {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1.5rem;
+}
+
+.step-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.step-content h4 {
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin: 0;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.step-content p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    position: relative;
+    z-index: 1;
+}
+
+/* Image Styling - Framed & Glowing */
+.step-image-wrapper {
+    flex: 1;
+    height: auto;
+    min-height: 380px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f8fafc;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 4px solid white;
+}
+
+.step-image-real {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-image-wrapper:hover .step-image-real {
+    transform: scale(1.08);
+}
+
+.step-image-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    gap: 1.5rem;
+    text-align: center;
+    padding: 2rem;
+}
+
+.placeholder-number {
+    font-size: 5rem;
+    font-weight: 800;
+    color: rgba(56, 189, 248, 0.2);
+    line-height: 1;
+}
+
+/* Pulsing Center Nodes */
+.visual-step-row::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    z-index: 5;
+    box-shadow: 0 0 0 4px var(--brand-blue);
+}
+
+/* Concentric Pulse Effect */
+.visual-step-row::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(56, 189, 248, 0.2);
+    border-radius: 50%;
+    z-index: 0;
+    animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .visual-steps-container {
+        gap: 4rem;
+    }
+
+    .visual-steps-container::before {
+        left: 24px;
+        top: 0;
+        bottom: 0;
+    }
+
+    .visual-step-row,
+    .row-reverse {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        padding-left: 60px;
+    }
+
+    .step-image-wrapper {
+        width: 100%;
+        height: 250px;
+        min-height: auto;
+    }
+
+    .visual-step-row::after {
+        left: 24px;
+        top: 2rem;
+        /* Align with top of content roughly */
+        transform: translate(-50%, 0);
+    }
+
+    .visual-step-row::before {
+        left: 24px;
+        top: 2rem;
+        transform: translate(-50%, 0);
+    }
+
+    .step-content {
+        padding: 2rem;
+    }
+
+    .step-number-watermark {
+        font-size: 5rem;
+        top: -20px;
+        right: 10px;
+    }
+}

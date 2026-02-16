@@ -28,7 +28,7 @@ const Navbar = () => {
     ];
 
     return (
-        <nav className={`navbar ${scrolled ? 'scrolled glass-panel' : ''}`}>
+        <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="container nav-container">
                 <NavLink to="/" className="logo" style={isHome && !scrolled ? { opacity: 0, pointerEvents: 'none', transition: 'opacity 0.3s ease' } : { opacity: 1, transition: 'opacity 0.3s ease' }}>
                     <img src={logo} alt="CAPS" className="navbar-logo" />
@@ -51,7 +51,7 @@ const Navbar = () => {
                                     >
                                         {link.name}
                                     </NavLink>
-                                    <div className={`mega-menu glass-panel ${isServicesOpen ? 'visible' : ''}`}>
+                                    <div className={`mega-menu ${isServicesOpen ? 'visible' : ''}`}>
                                         <div className="mega-menu-grid">
                                             {servicesData.map(svc => (
                                                 <NavLink

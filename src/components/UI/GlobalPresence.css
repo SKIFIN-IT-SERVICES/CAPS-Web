@@ -1,0 +1,60 @@
+.global-presence-section {
+    margin: 5rem 0;
+}
+
+.global-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.global-header h3 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+}
+
+.global-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.location-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+}
+
+.map-icon-box {
+    background: rgba(52, 152, 219, 0.1);
+    color: var(--primary-color);
+    padding: 0.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.location-info h4 {
+    margin: 0 0 0.3rem 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.location-type {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-transform: uppercase;
+}

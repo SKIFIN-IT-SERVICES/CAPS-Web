@@ -1,0 +1,48 @@
+.service-sub-processes {
+    margin: 4rem 0;
+}
+
+.sub-process-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.sub-process-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.sub-process-card {
+    padding: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.sub-process-card:hover {
+    transform: translateY(-5px);
+}
+
+.process-icon-wrapper {
+    background: var(--gradient-primary);
+    padding: 0.8rem;
+    border-radius: 12px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.process-content h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--text-dark);
+}
+
+.process-content p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}

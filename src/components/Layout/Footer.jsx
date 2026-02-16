@@ -17,6 +17,7 @@ const Footer = () => {
                     <h4>Company</h4>
                     <ul>
                         <li><a href="/about">About Us</a></li>
+                        <li><a href="/insights">Insights</a></li>
                     </ul>
                 </div>
 

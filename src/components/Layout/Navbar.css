@@ -31,19 +31,13 @@
 /* Glassy Dark Navbar Effect */
 /* Glassy Gradient Navbar Effect */
 .navbar.scrolled {
-    /* Gradient based on brand colors with 85% opacity: 
-       Blue #0ea5e9 -> rgba(14, 165, 233, 0.85)
-       Green #10b981 -> rgba(16, 185, 129, 0.85) 
-       Yellow #f59e0b -> rgba(245, 158, 11, 0.85) 
-    */
-    background: linear-gradient(135deg,
-            rgba(14, 165, 233, 0.85) 0%,
-            rgba(16, 185, 129, 0.85) 50%,
-            rgba(245, 158, 11, 0.85) 100%);
+    /* Fixed Dark Blue Background for readability */
+    background: rgba(15, 23, 42, 0.95);
+    /* var(--primary) with opacity */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     height: 90px;
 }
 
@@ -169,59 +163,37 @@
 
 .mega-menu {
     position: fixed;
-    /* Fixed works better since Navbar is fixed */
-    top: 75px;
-    /* Moved up as requested */
-    /* Match scrolled height approx, or use 100% of parent if parent is navbar */
-    left: 50%;
-    transform: translateX(-50%) translateY(0);
-    /* Removed downward shift */
-    width: 90vw;
-    max-width: 1000px;
-    background: rgba(15, 23, 42, 0.99) !important;
-    /* Force dark background over glass-panel */
-    padding: 2.5rem;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    top: 90px;
+    left: 0;
+    width: 100%;
+    /* Full width as requested */
+    background: #0f172a !important;
+    /* Solid Dark Blue/Black */
+    padding: 2.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     max-height: 80vh;
     overflow-y: auto;
-    scrollbar-width: thin;
-    /* For Firefox */
-    scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
     z-index: 2000;
-    /* Ensure strictly on top */
-}
-
-/* Adjust top for non-scrolled state if needed, or handle via JS. 
-   Simplification: relying on hover on .nav-item-dropdown to trigger it.
-   But if position is fixed, we need to ensure it appears "connected".
-   Actually, if .navbar is fixed, position: absolute on .mega-menu (anchored to .navbar) is better than fixed.
-*/
-.navbar .mega-menu {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
-    width: 90vw;
-    max-width: 1000px;
 }
 
 .nav-item-dropdown .mega-menu.visible {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
-    pointer-events: auto;
-    /* Ensure events work when visible */
 }
 
 .mega-menu-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    /* 4 columns for better spacing */
     gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .mega-menu-item {
@@ -229,49 +201,40 @@
     align-items: flex-start;
     gap: 1rem;
     padding: 1rem;
-    border-radius: 12px;
+    border-radius: 8px;
     text-decoration: none;
     transition: background 0.2s ease;
 }
 
-.mega-menu-item:hover,
-.mega-menu-item.active {
-    background: rgba(255, 255, 255, 0.08);
+.mega-menu-item:hover {
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .mega-menu-item.active {
-    border: 1px solid rgba(56, 189, 248, 0.5);
-    /* Blue border for active item */
+    background: rgba(56, 189, 248, 0.1);
+    border-left: 3px solid #38bdf8;
 }
 
 .mega-icon-box {
-    background: rgba(56, 189, 248, 0.15);
-    padding: 12px;
-    border-radius: 12px;
+    background: rgba(56, 189, 248, 0.1);
+    padding: 10px;
+    border-radius: 8px;
     color: #38bdf8;
-    /* Explicit color */
     flex-shrink: 0;
-    transition: transform 0.2s ease;
-}
-
-.mega-menu-item:hover .mega-icon-box {
-    transform: scale(1.1);
-    background: var(--primary);
-    color: white;
 }
 
 .mega-text h5 {
-    margin: 0 0 0.35rem 0;
-    font-size: 1rem;
-    color: #ffffff !important;
-    /* Force visibility */
-    font-weight: 700;
+    margin: 0 0 0.25rem 0;
+    font-size: 0.95rem;
+    color: #f8fafc !important;
+    /* High contrast white */
+    font-weight: 600;
 }
 
 .mega-text span {
-    font-size: 0.85rem;
-    color: rgba(255, 255, 255, 0.7) !important;
-    /* Force visibility */
+    font-size: 0.8rem;
+    color: #94a3b8 !important;
+    /* Light gray for readable subtext */
     line-height: 1.4;
     display: block;
 }

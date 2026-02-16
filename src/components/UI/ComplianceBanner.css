@@ -1,0 +1,78 @@
+.compliance-banner-section {
+    background: linear-gradient(90deg, #0f172a, #1e293b);
+    padding: 3rem 0;
+    color: white;
+}
+
+.compliance-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.compliance-intro {
+    max-width: 400px;
+}
+
+.compliance-intro h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    font-weight: 700;
+}
+
+.compliance-intro p {
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+.compliance-logos {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.compliance-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.compliance-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.compliance-icon {
+    color: #4ade80;
+    /* Lucide green-400 equivalent */
+}
+
+.compliance-item span {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+    .compliance-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .compliance-logos {
+        justify-content: flex-start;
+        width: 100%;
+        gap: 1.5rem;
+    }
+}

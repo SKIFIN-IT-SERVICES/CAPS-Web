@@ -8,7 +8,9 @@ const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
+const Insights = lazy(() => import('./pages/Insights'));
 const Contact = lazy(() => import('./pages/Contact'));
+const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Loading Fallback
 const LoadingFallback = () => (
@@ -25,25 +27,43 @@ const LoadingFallback = () => (
 
 import ScrollToTop from './components/ScrollToTop';
 
+import { Outlet } from 'react-router-dom';
+
+// Layout Component (Navbar + Footer)
+const Layout = () => (
+  <div className="flex flex-col min-h-screen">
+    <Navbar />
+    <main style={{ flex: 1 }}>
+      <Suspense fallback={<LoadingFallback />}>
+        <Outlet />
+      </Suspense>
+    </main>
+    <Footer />
+  </div>
+);
+
 function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main style={{ flex: 1 }}>
+      <Routes>
+        {/* Main Layout Routes */}
+        <Route element={<Layout />}>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/:id" element={<ServiceDetail />} />
+          <Route path="/insights" element={<Insights />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+
+        {/* 404 Route (No Layout) */}
+        <Route path="*" element={
           <Suspense fallback={<LoadingFallback />}>
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/services" element={<Services />} />
-              <Route path="/services/:id" element={<ServiceDetail />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
+            <NotFound />
           </Suspense>
-        </main>
-        <Footer />
-      </div>
+        } />
+      </Routes>
     </Router>
   );
 }

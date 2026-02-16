@@ -32,8 +32,18 @@
   --gradient-main: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-green) 100%);
   --gradient-tri: linear-gradient(135deg, var(--brand-blue) 0%, var(--brand-green) 50%, var(--brand-yellow) 100%);
   --gradient-text: linear-gradient(to right, var(--brand-blue), var(--brand-green));
+  --gradient-primary: var(--gradient-main);
+  /* Fix for ServiceStats */
+  --gradient-sec: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  /* Restored */
+
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Inter', sans-serif;
+
+  /* Restored Variables */
+  --light-surface: #F1F5F9;
+  --surface: #FFFFFF;
+  --text-dark: #0f172a;
 }
 
 * {
