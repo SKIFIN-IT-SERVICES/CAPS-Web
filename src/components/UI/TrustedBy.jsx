@@ -34,7 +34,7 @@ const TrustedBy = () => {
     return (
         <TickerWrapper>
             <div className="container" style={{ textAlign: 'center', marginBottom: '2rem' }}>
-                <p style={{ color: 'var(--text-light)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem' }}>Trusted by Industry Leaders</p>
+                <p style={{ color: 'var(--text-light)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '1px', fontSize: '0.9rem' }}>Collaborating with Industry Leaders</p>
             </div>
             <TickerContent
                 animate={{ x: ["0%", "-50%"] }}
