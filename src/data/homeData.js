@@ -73,7 +73,7 @@ export const caseStudies = [
         stat: "24h",
         statContext: "Pre-D Turnaround",
         desc: "Scaling operations to handle 50k+ daily claims while maintaining CDT-2025 compliance.",
-        image: "https://images.unsplash.com/photo-1606811842783-5f78005fae3e?auto=format&fit=crop&q=80&w=2070",
+        image: "/images/dental-office.jpg",
         link: "/services/dental-claims-processing"
     },
     {
