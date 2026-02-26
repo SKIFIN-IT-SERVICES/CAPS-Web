@@ -69,31 +69,31 @@ const Role = styled.div`
 `;
 
 const Testimonials = () => {
-    return (
-        <Section>
-            <div className="container">
-                <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-                    <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--primary)', fontFamily: 'var(--font-heading)' }}>What Our Partners Say</h2>
-                </div>
+  return (
+    <Section>
+      <div className="container">
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h2 style={{ fontSize: '2.5rem', fontWeight: 800, color: 'var(--primary)', fontFamily: 'var(--font-heading)' }}>What Our Partners Say</h2>
+        </div>
 
-                <TestimonialCard
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                >
-                    <QuoteIcon><Quote size={48} /></QuoteIcon>
-                    <Text>"CAPS transformed our claims processing workflow. The accuracy has improved by 40% and we've reduced our operational costs significantly."</Text>
-                    <Author>
-                        <Avatar>JD</Avatar>
-                        <Info>
-                            <Name>Jonathan Doe</Name>
-                            <Role>Director of Operations, MedHealth Inc.</Role>
-                        </Info>
-                    </Author>
-                </TestimonialCard>
-            </div>
-        </Section>
-    );
+        <TestimonialCard
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+        >
+          <QuoteIcon><Quote size={48} /></QuoteIcon>
+          <Text>"CAPS transformed our claims processing workflow. The accuracy has improved by 40% and we've reduced our operational costs significantly."</Text>
+          <Author>
+            <Avatar>DB</Avatar>
+            <Info>
+              <Name>David Barrison</Name>
+              <Role>Information System Manager, Admin Sure Inc. - California TPA</Role>
+            </Info>
+          </Author>
+        </TestimonialCard>
+      </div>
+    </Section>
+  );
 };
 
 export default Testimonials;

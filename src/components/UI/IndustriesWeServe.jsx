@@ -15,7 +15,7 @@ const IndustriesWeServe = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        Industries We Serve
+                        The solutions we serve.
                     </motion.h2>
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
