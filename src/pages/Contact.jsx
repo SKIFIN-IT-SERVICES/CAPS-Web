@@ -1,160 +1,191 @@
-import React from 'react';
-import HeroSection from '../components/UI/HeroSection';
-import './Contact.css'; // New dedicated CSS
-import './Pages.css'; // Shared page styles
-import contactHero from '../assets/images/contact_support_3d_1769510307552.png';
-import logo from '../assets/logo.png';
-import { Mail, Phone, MapPin, Send, Clock, MessageSquare } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import SectionHeader from '../components/UI/SectionHeader';
+import { Mail, Phone, MapPin, Send, MessageSquare, Globe, ArrowRight } from 'lucide-react';
+import HeroSection from '../components/UI/HeroSection';
+import logo from '../assets/logo.png';
 import { servicesData } from '../data/servicesData';
+import './Contact.css';
+import './Pages.css';
 
 const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
+    const [formStatus, setFormStatus] = useState('idle');
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setFormStatus('sending');
+        setTimeout(() => {
+            setFormStatus('success');
+        }, 1500);
+    };
+
+
+    const contactInfo = [
+        {
+            icon: MapPin,
+            title: "Visit Us",
+            desc: "Come say hello at our headquarters.",
+            address: "14071 Peyton Dr Unit 992, Chino Hills, CA 91709",
+            color: "var(--brand-green)"
+        },
+        {
+            icon: Mail,
+            title: "Sales Inquiries",
+            desc: "For project quotes and service information.",
+            email: "sales@caps-email.com",
+            phone: "909-292-XXXX",
+            color: "var(--brand-blue)"
+        },
+        {
+            icon: Globe,
+            title: "Global Support",
+            desc: "For existing clients and general queries.",
+            email: "support@caps-email.com",
+            phone: "909-292-XXXX",
+            color: "var(--brand-green)"
+        },
+        {
+            icon: MessageSquare,
+            title: "General Inquiries",
+            desc: "Just want to say hello or ask a question?",
+            email: "info@caps-email.com",
+            phone: "909-292-XXXX",
+            color: "var(--brand-yellow)"
+        }
+    ];
+
     return (
-        <div className="page-contact">
+        <div className="page-contact redesign">
             <HeroSection
                 logo={logo}
                 PageIcon={<MessageSquare size={64} />}
-                title="Contact Us"
-                subtitle="We're here to help you optimize your intelligent arrangements."
-                ctaText="Scroll Down"
+                title="Let's Talk Business"
+                subtitle="Whether you're interested in our services, looking for advice, or just want to say hello, we'd love to hear from you."
+                ctaText="Send Message"
                 ctaLink="#contact-form"
                 image="/images/assets/contact-hero.jpg"
             />
 
-            <div className="container contact-container">
-                <div className="contact-wrapper glass-panel">
+            <div className="container contact-main-container">
+                <div className="contact-grid-layout">
 
-                    {/* Contact Info Sidebar */}
-                    <div className="contact-info">
-                        <h3>Get in Touch</h3>
-                        <p className="contact-desc">Ready to start your journey with CAPS? Reach out to us for a consultation.</p>
-
-                        <div className="info-item">
-                            <div className="icon-box"><MapPin size={20} /></div>
-                            <div>
-                                <h5>Visit Us</h5>
-                                <p>14071 Peyton Dr Unit 992<br />Chino Hills, CA 91709</p>
+                    {/* LEFT: Contact Info Cards */}
+                    <motion.div
+                        className="contact-cards-column"
+                        initial={{ opacity: 0, x: -30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        {contactInfo.map((item, idx) => (
+                            <div key={idx} className="modern-contact-card">
+                                <div className="card-icon-wrapper" style={{ background: `${item.color}15`, color: item.color }}>
+                                    <item.icon size={24} />
+                                </div>
+                                <div className="card-content">
+                                    <h3>{item.title}</h3>
+                                    <p>{item.desc}</p>
+                                    {item.address ? (
+                                        <p className="card-address">{item.address}</p>
+                                    ) : (
+                                        <>
+                                            <a href={`mailto:${item.email}`} className="card-email">{item.email}</a>
+                                            <span className="card-phone">{item.phone}</span>
+                                        </>
+                                    )}
+                                </div>
                             </div>
+                        ))}
+                    </motion.div>
+
+                    {/* RIGHT: Contact Form Card */}
+                    <motion.div
+                        className="contact-form-column"
+                        id="contact-form"
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                    >
+                        <div className="modern-form-card glass-panel">
+                            {formStatus === 'success' ? (
+                                <div className="form-success-state">
+                                    <div className="success-icon-box">
+                                        <Send size={48} />
+                                    </div>
+                                    <h2>Message Sent!</h2>
+                                    <p>Thank you for reaching out. We usually respond within 24 hours.</p>
+                                    <button onClick={() => setFormStatus('idle')} className="btn-reset">Send another message</button>
+                                </div>
+                            ) : (
+                                <form onSubmit={handleSubmit} className="premium-form">
+                                    <div className="form-header-simple">
+                                        <span className="form-badge">Get in Touch</span>
+                                        <h2>Send a Message</h2>
+                                    </div>
+
+                                    <div className="form-row-grid">
+                                        <div className="form-input-group">
+                                            <label>First Name</label>
+                                            <input type="text" placeholder="Jane" required />
+                                        </div>
+                                        <div className="form-input-group">
+                                            <label>Last Name</label>
+                                            <input type="text" placeholder="Doe" required />
+                                        </div>
+                                    </div>
+
+                                    <div className="form-input-group">
+                                        <label>Email Address</label>
+                                        <input type="email" placeholder="jane@example.com" required />
+                                    </div>
+
+                                    <div className="form-row-grid">
+                                        <div className="form-input-group">
+                                            <label>Company Name</label>
+                                            <input type="text" placeholder="Your Company" />
+                                        </div>
+                                        <div className="form-input-group">
+                                            <label>Company Size</label>
+                                            <input type="text" placeholder="e.g. 1-50, 50-200" />
+                                        </div>
+                                    </div>
+
+                                    <div className="form-row-grid">
+                                        <div className="form-input-group">
+                                            <label>Role / Job Title</label>
+                                            <input type="text" placeholder="e.g. CTO, Claims Manager" />
+                                        </div>
+                                        <div className="form-input-group">
+                                            <label>Service of Interest</label>
+                                            <select required>
+                                                <option value="">Select a service...</option>
+                                                {servicesData.map(service => (
+                                                    <option key={service.id} value={service.id}>{service.title}</option>
+                                                ))}
+                                                <option value="other">Other Inquiry</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div className="form-input-group">
+                                        <label>Subject</label>
+                                        <input type="text" placeholder="Brief summary of your inquiry" />
+                                    </div>
+
+                                    <div className="form-input-group">
+                                        <label>Message</label>
+                                        <textarea rows="4" placeholder="How can we help you?" required></textarea>
+                                    </div>
+
+                                    <button type="submit" className="premium-submit-btn" disabled={formStatus === 'sending'}>
+                                        {formStatus === 'sending' ? 'Sending...' : <>Send Message <ArrowRight size={20} /></>}
+                                    </button>
+                                </form>
+                            )}
                         </div>
-
-                        <div className="info-item">
-                            <div className="icon-box"><Phone size={20} /></div>
-                            <div>
-                                <h5>Call Us</h5>
-                                <p>909-292-XXXX</p>
-                            </div>
-                        </div>
-
-                        <div className="info-item">
-                            <div className="icon-box"><Mail size={20} /></div>
-                            <div>
-                                <h5>Email Us</h5>
-                                <p>info@caps-email.com</p>
-                            </div>
-                        </div>
-
-
-
-                        <div className="contact-illustration">
-                            <img src={contactHero} alt="Contact Illustration" />
-                        </div>
-                    </div>
-
-                    {/* Contact Form */}
-                    <div className="contact-form-section" id="contact-form">
-                        <div className="form-header">
-                            <motion.div
-                                className="header-icon-badge"
-                                animate={{ rotate: [0, 10, -10, 0] }}
-                                transition={{ duration: 4, repeat: Infinity, repeatDelay: 2 }}
-                            >
-                                <Send size={24} />
-                            </motion.div>
-                            <h2 className="header-title">Send a Message</h2>
-                            <p className="header-subtitle">We usually respond within 24 hours.</p>
-
-                            <div className="header-decoration">
-                                <motion.div
-                                    className="deco-line"
-                                    initial={{ width: 0 }}
-                                    whileInView={{ width: "100px" }}
-                                    transition={{ delay: 0.3, duration: 0.8 }}
-                                    viewport={{ once: true }}
-                                />
-                            </div>
-                        </div>
-
-                        <form className="modern-form">
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <label>First Name</label>
-                                    <input type="text" placeholder="Jane" />
-                                </div>
-                                <div className="form-group">
-                                    <label>Last Name</label>
-                                    <input type="text" placeholder="Doe" />
-                                </div>
-                            </div>
-
-                            <div className="form-group">
-                                <label>Email Address</label>
-                                <div className="input-with-icon">
-                                    <Mail size={18} className="input-icon" />
-                                    <input type="email" placeholder="jane@example.com" />
-                                </div>
-                            </div>
-
-                            <div className="form-row">
-                                <div className="form-group">
-                                    <label>Company Name</label>
-                                    <input type="text" placeholder="Your Company" />
-                                </div>
-                                <div className="form-group">
-                                    <label>Company Size</label>
-                                    <input type="text" placeholder="e.g. 1-50, 50-200" />
-                                </div>
-                            </div>
-
-                            <div className="form-group">
-                                <label>Role / Job Title</label>
-                                <input type="text" placeholder="e.g. CTO, Claims Manager" />
-                            </div>
-
-                            <div className="form-group">
-                                <label>Service of Interest</label>
-                                <div className="input-with-icon">
-                                    <MessageSquare size={18} className="input-icon" />
-                                    <select>
-                                        <option value="">Select a service...</option>
-                                        {servicesData.map(service => (
-                                            <option key={service.id} value={service.id}>{service.title}</option>
-                                        ))}
-                                        <option value="other">Other Inquiry</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="form-group">
-                                <label>Subject</label>
-                                <input type="text" placeholder="Brief summary of your inquiry" />
-                            </div>
-
-                            <div className="form-group">
-                                <label>Message</label>
-                                <textarea rows="5" placeholder="How can we help you?"></textarea>
-                            </div>
-
-                            <motion.button
-                                whileHover={{ scale: 1.02 }}
-                                whileTap={{ scale: 0.98 }}
-                                className="cta-button primary-btn submit-btn"
-                                type="button"
-                            >
-                                Send Message <Send size={18} />
-                            </motion.button>
-                        </form>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
